@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FraudShield Kenya | Fraud & Scam Awareness System</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+</head>
+
+<body>
+
+<!-- ================= NAVIGATION ================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+        <div class="logo-icon">
+            <i class="fa-solid fa-shield-halved"></i>
+        </div>
+
+        <div>
+            <h2>FraudShield Kenya</h2>
+            <small>Fraud Awareness & Reporting System</small>
+        </div>
+    </div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#scams">Scam Types</a>
+        <a href="#verify">Verify</a>
+        <a href="#report">Report</a>
+        <a href="#awareness">Awareness</a>
+        <a href="#about">About</a>
+    </nav>
+
+    <button class="login-btn" onclick="showLogin()">
+        <i class="fa-solid fa-user"></i>
+        Login
+    </button>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <div class="badge">
+            <i class="fa-solid fa-shield"></i>
+            Kenya Digital Safety
+        </div>
+
+        <h1>
+            Stay Safe From
+            <span>Digital Fraud & Scams</span>
+        </h1>
+
+        <p>
+            Learn how to identify scams, verify suspicious information,
+            report fraudulent incidents and protect your digital identity.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#report" class="primary-btn">
+                <i class="fa-solid fa-flag"></i>
+                Report a Scam
+            </a>
+
+            <a href="#verify" class="secondary-btn">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                Verify Suspicious Information
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-card">
+
+        <div class="shield-large">
+            <i class="fa-solid fa-shield-halved"></i>
+        </div>
+
+        <h3>Real-Time Protection</h3>
+
+        <p>
+            Identify suspicious activity and get guidance
+            before making risky digital transactions.
+        </p>
+
+        <div class="status">
+            <span class="status-dot"></span>
+            System Protection Active
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= STATISTICS ================= -->
+
+<section class="stats">
+
+    <div class="stat-card">
+
+        <i class="fa-solid fa-bullseye"></i>
+
+        <div>
+            <h3>82%</h3>
+            <p>Targeted in TransUnion's Dec. 2024 survey</p>
+        </div>
+
+    </div>
+
+
+    <div class="stat-card">
+
+        <i class="fa-solid fa-user-shield"></i>
+
+        <div>
+            <h3>11%</h3>
+            <p>Reported becoming victims</p>
+        </div>
+
+    </div>
+
+
+    <div class="stat-card">
+
+        <i class="fa-solid fa-mobile-screen"></i>
+
+        <div>
+            <h3>54%</h3>
+            <p>Reported mobile-money fraud exposure</p>
+        </div>
+
+    </div>
+
+
+    <div class="stat-card">
+
+        <i class="fa-solid fa-clock"></i>
+
+        <div>
+            <h3>24/7</h3>
+            <p>Fraud awareness and reporting access</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SCAM TYPES ================= -->
+
+<section class="section" id="scams">
+
+    <div class="section-title">
+
+        <span>SCAM DATABASE</span>
+
+        <h2>Know the Common Scam Types</h2>
+
+        <p>
+            Understanding common fraud techniques can help you
+            recognize suspicious activity before becoming a victim.
+        </p>
+
+    </div>
+
+
+    <div class="scam-grid">
+
+
+        <div class="scam-card">
+
+            <div class="scam-icon phishing">
+                <i class="fa-solid fa-fish"></i>
+            </div>
+
+            <h3>Phishing</h3>
+
+            <p>
+                Fake emails, websites or messages designed to
+                steal passwords, personal information or credentials.
+            </p>
+
+            <button onclick="showScam('Phishing')">
+                Learn More →
+            </button>
+
+        </div>
+
+
+        <div class="scam-card">
+
+            <div class="scam-icon sms">
+                <i class="fa-solid fa-comment-sms"></i>
+            </div>
+
+            <h3>Smishing</h3>
+
+            <p>
+                Fraudulent SMS or text messages containing
+                malicious links or requests for information.
+            </p>
+
+            <button onclick="showScam('Smishing')">
+                Learn More →
+            </button>
+
+        </div>
+
+
+        <div class="scam-card">
+
+            <div class="scam-icon phone">
+                <i class="fa-solid fa-phone"></i>
+            </div>
+
+            <h3>Vishing</h3>
+
+            <p>
+                Fraudulent telephone calls where criminals
+                impersonate trusted organizations or people.
+            </p>
+
+            <button onclick="showScam('Vishing')">
+                Learn More →
+            </button>
+
+        </div>
+
+
+        <div class="scam-card">
+
+            <div class="scam-icon money">
+                <i class="fa-solid fa-money-bill-transfer"></i>
+            </div>
+
+            <h3>Mobile Money Fraud</h3>
+
+            <p>
+                Scams involving mobile-money transfers,
+                transaction codes, fake customer care and payments.
+            </p>
+
+            <button onclick="showScam('Mobile Money Fraud')">
+                Learn More →
+            </button>
+
+        </div>
+
+
+        <div class="scam-card">
+
+            <div class="scam-icon identity">
+                <i class="fa-solid fa-id-card"></i>
+            </div>
+
+            <h3>Identity Theft</h3>
+
+            <p>
+                Unauthorized use of personal information to
+                impersonate another person.
+            </p>
+
+            <button onclick="showScam('Identity Theft')">
+                Learn More →
+            </button>
+
+        </div>
+
+
+        <div class="scam-card">
+
+            <div class="scam-icon shopping">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+
+            <h3>Online Shopping Scams</h3>
+
+            <p>
+                Fake sellers, fraudulent advertisements,
+                counterfeit products and non-delivery scams.
+            </p>
+
+            <button onclick="showScam('Online Shopping Scam')">
+                Learn More →
+            </button>
+
+        </div>
+
+
+        <div class="scam-card">
+
+            <div class="scam-icon job">
+                <i class="fa-solid fa-briefcase"></i>
+            </div>
+
+            <h3>Employment Scams</h3>
+
+            <p>
+                Fake job opportunities that request registration,
+                training fees or personal information.
+            </p>
+
+            <button onclick="showScam('Employment Scam')">
+                Learn More →
+            </button>
+
+        </div>
+
+
+        <div class="scam-card">
+
+            <div class="scam-icon investment">
+                <i class="fa-solid fa-chart-line"></i>
+            </div>
+
+            <h3>Investment Scams</h3>
+
+            <p>
+                Fraudulent investment opportunities promising
+                unrealistic or guaranteed financial returns.
+            </p>
+
+            <button onclick="showScam('Investment Scam')">
+                Learn More →
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= VERIFY ================= -->
+
+<section class="verify-section" id="verify">
+
+    <div class="verify-container">
+
+        <div class="verify-text">
+
+            <span>REAL-TIME VERIFICATION</span>
+
+            <h2>
+                Is that message
+                <strong>really safe?</strong>
+            </h2>
+
+            <p>
+                Before clicking a link, sending money or providing
+                personal information, use the verification interface
+                to assess suspicious content.
+            </p>
+
+            <ul>
+
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Check suspicious messages
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Review suspicious links
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Identify common scam indicators
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-check"></i>
+                    Receive recommended safety actions
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="verify-box">
+
+            <div class="verify-header">
+                <i class="fa-solid fa-shield-virus"></i>
+                Suspicious Content Checker
+            </div>
+
+            <label>Paste suspicious message or link</label>
+
+            <textarea
+                id="messageInput"
+                placeholder="Example: Your account has been selected for a reward. Click this link immediately..."
+            ></textarea>
+
+            <button
+                class="verify-btn"
+                onclick="verifyMessage()"
+            >
+                <i class="fa-solid fa-shield-halved"></i>
+                Check for Scam
+            </button>
+
+            <div id="verificationResult"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= REPORT ================= -->
+
+<section class="section report-section" id="report">
+
+    <div class="section-title">
+
+        <span>INCIDENT REPORTING</span>
+
+        <h2>Report a Suspicious Incident</h2>
+
+        <p>
+            Submit information about a suspected fraud incident.
+            Do not submit passwords, PINs or authentication codes.
+        </p>
+
+    </div>
+
+
+    <form class="report-form" id="reportForm">
+
+        <div class="form-row">
+
+            <div class="form-group">
+
+                <label>Full Name</label>
+
+                <input
+                    type="text"
+                    id="fullName"
+                    placeholder="Enter your name"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Email Address</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="example@email.com"
+                    required
+                >
+
+            </div>
+
+        </div>
+
+
+        <div class="form-row">
+
+            <div class="form-group">
+
+                <label>Fraud Type</label>
+
+                <select id="fraudType" required>
+
+                    <option value="">Select fraud type</option>
+
+                    <option>Phishing</option>
+                    <option>Smishing</option>
+                    <option>Vishing</option>
+                    <option>Mobile Money Fraud</option>
+                    <option>Identity Theft</option>
+                    <option>Online Shopping Scam</option>
+                    <option>Employment Scam</option>
+                    <option>Investment Scam</option>
+                    <option>Romance Scam</option>
+                    <option>Business Payment Fraud</option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label>Date of Incident</label>
+
+                <input
+                    type="date"
+                    id="incidentDate"
+                    required
+                >
+
+            </div>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>How did the incident occur?</label>
+
+            <textarea
+                id="description"
+                placeholder="Describe what happened..."
+                required
+            ></textarea>
+
+        </div>
+
+
+        <div class="warning-box">
+
+            <i class="fa-solid fa-triangle-exclamation"></i>
+
+            <div>
+
+                <strong>Security Warning</strong>
+
+                <p>
+                    Never submit your password, PIN, OTP,
+                    authentication code or complete bank account credentials.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <button class="submit-btn" type="submit">
+
+            <i class="fa-solid fa-paper-plane"></i>
+
+            Submit Incident Report
+
+        </button>
+
+    </form>
+
+</section>
+
+
+<!-- ================= AWARENESS ================= -->
+
+<section class="awareness" id="awareness">
+
+    <div class="section-title">
+
+        <span>SECURITY AWARENESS</span>
+
+        <h2>Protect Yourself From Fraud</h2>
+
+    </div>
+
+
+    <div class="tips-grid">
+
+
+        <div class="tip">
+
+            <div class="tip-number">01</div>
+
+            <div>
+
+                <h3>Verify Unexpected Requests</h3>
+
+                <p>
+                    Independently contact the organization using
+                    a trusted communication channel.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="tip">
+
+            <div class="tip-number">02</div>
+
+            <div>
+
+                <h3>Protect Authentication Codes</h3>
+
+                <p>
+                    Never share passwords, PINs or one-time
+                    authentication codes with another person.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="tip">
+
+            <div class="tip-number">03</div>
+
+            <div>
+
+                <h3>Check Links Carefully</h3>
+
+                <p>
+                    Inspect suspicious links and avoid clicking
+                    links received from unknown sources.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="tip">
+
+            <div class="tip-number">04</div>
+
+            <div>
+
+                <h3>Report Quickly</h3>
+
+                <p>
+                    Preserve relevant evidence such as messages,
+                    screenshots and transaction information.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="about" id="about">
+
+    <div class="about-container">
+
+        <div>
+
+            <span>ABOUT THE PROJECT</span>
+
+            <h2>
+                Fraud and Scams in Kenya
+            </h2>
+
+            <p>
+                This system is a frontend prototype based on the
+                academic research project titled:
+            </p>
+
+            <h3>
+                "Fraud and Scams in Kenya: An Analysis of Systemic
+                Vulnerabilities, Repositories and Threat Mitigation Landscapes"
+            </h3>
+
+            <p>
+                The proposed system combines user education,
+                incident reporting, suspicious-message guidance,
+                search and categorization, and administrative
+                management of scam information.
+            </p>
+
+        </div>
+
+
+        <div class="research-card">
+
+            <i class="fa-solid fa-user-graduate"></i>
+
+            <h3>Researcher</h3>
+
+            <p>
+                Joseph Mabruk Taskuru Juma
+            </p>
+
+            <small>
+                Academic Research Project • August 2026
+            </small>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-content">
+
+        <div>
+
+            <h2>
+                <i class="fa-solid fa-shield-halved"></i>
+                FraudShield Kenya
+            </h2>
+
+            <p>
+                Digital fraud awareness, verification
+                and incident reporting.
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <a href="#home">Home</a>
+            <a href="#scams">Scam Types</a>
+            <a href="#verify">Verify</a>
+            <a href="#report">Report</a>
+
+        </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+        © 2026 FraudShield Kenya | Academic Project
+
+    </div>
+
+</footer>
+
+
+<!-- ================= LOGIN MODAL ================= -->
+
+<div class="modal" id="loginModal">
+
+    <div class="modal-content">
+
+        <button
+            class="close-modal"
+            onclick="closeLogin()"
+        >
+            ×
+        </button>
+
+        <div class="modal-icon">
+            <i class="fa-solid fa-user-shield"></i>
+        </div>
+
+        <h2>System Login</h2>
+
+        <p>Access your FraudShield account.</p>
+
+        <input
+            type="email"
+            placeholder="Email address"
+        >
+
+        <input
+            type="password"
+            placeholder="Password"
+        >
+
+        <button class="login-submit">
+            Login
+        </button>
+
+        <small>
+            Frontend demonstration only
+        </small>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
